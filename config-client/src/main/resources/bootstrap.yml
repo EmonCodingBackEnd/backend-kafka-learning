@@ -1,0 +1,16 @@
+# /{application}/{profile}[/{label}]
+spring:
+  cloud:
+    config:
+      # 默认true；如果设置为true，会覆盖application开头的yml文件内容；如果设置为false，不会启用配置中心内容。
+      enabled: true
+      # uri和discovery二选一
+      discovery:
+        # 默认false
+        enabled: false
+        # 这里的service-id的值大小写都可以；其中CONFIG是指config-server在注册中心的服务名
+        service-id: CONFIG
+      uri: http://localhost:8900/
+      name: kafka
+      profile: dev
+      label: develop

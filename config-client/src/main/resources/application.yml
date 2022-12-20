@@ -1,0 +1,42 @@
+server:
+  port: 7001
+
+# 动态刷新服务的配置
+# http://localhost:7002/actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        # 默认仅开放了 health；注意，bus-refresh 或 busrefresh 都可以
+        include: health,info,refresh,bus-refresh
+
+## 动态刷新配置示例属性：actuator的refresh
+#
+#    1、修改config并提交
+#    2、执行命令
+#    特点：刷新单个服务器
+#    执行：     curl -XPOST http://localhost:7002/actuator/refresh
+#    输出：     ["config.client.version","age"]
+#    输出解释：把更改的属性，以数组方式展示出来
+#    3、访问
+#    http://localhost:7002/test
+#
+username: emon
+age: 18
+
+## 动态刷新配置示例属性：actuator的bus-refresh
+#
+#    1、修改config并提交
+#    2、执行命令
+#    特点：刷新批量服务器
+#    执行：     curl -XPOST http://localhost:7002/actuator/busrefresh
+#    注意：busrefresh 不可替换为 bus-refresh
+#    3、访问
+#    http://localhost:7002/test
+#
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: emon:9092
