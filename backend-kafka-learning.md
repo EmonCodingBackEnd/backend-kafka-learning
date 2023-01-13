@@ -38,6 +38,10 @@ https://blog.csdn.net/XinhuaShuDiao/article/details/113769837
 
 
 
+[Linux安装Kafka并开启SASL/PLAINTEXT认证](https://blog.csdn.net/qq_41581031/article/details/125648498)
+
+
+
 # Kafka客户端操作
 
 ## Kafka客户端API类型
