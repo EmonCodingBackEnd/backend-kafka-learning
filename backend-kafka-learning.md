@@ -32,6 +32,8 @@ https://blog.csdn.net/xinhuashudiao/article/details/113766102
 
 https://blog.csdn.net/xinhuashudiao/category_8499672.html【给力列表】
 
+https://my.oschina.net/keepal?tab=newest&catalogId=7217403【给力Kafka进阶】
+
 
 
 https://blog.csdn.net/XinhuaShuDiao/article/details/113769837
